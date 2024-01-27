@@ -4,6 +4,8 @@ const router=require('./routes/route')
 const db=require('./data/database')
 const bodyParser = require('body-parser');
 app.use('/images',express.static('images'));
+app.use(express.static('public'));
+
 app.use(router)
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
